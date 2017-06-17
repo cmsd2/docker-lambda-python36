@@ -10,4 +10,4 @@ RUN yum -y install python36u-pip
 RUN easy_install-3.6 pip
 RUN pip install virtualenv awscli
 
-CMD [ "python" ]
+CMD [ "python3.6" ]
