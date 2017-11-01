@@ -8,7 +8,7 @@ RUN curl -sL https://rpm.nodesource.com/setup_9.x | bash -
 RUN yum -y update
 RUN yum -y install https://rhel6.iuscommunity.org/ius-release.rpm
 RUN yum -y install python36u-pip unqip jq zip unzip
-RUN yum -y install nodejs
+RUN yum -y install --nogpgcheck nodejs
 RUN yum -y groupinstall 'Development Tools'
 RUN easy_install-3.6 pip
 RUN pip install virtualenv awscli
