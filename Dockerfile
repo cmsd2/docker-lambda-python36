@@ -4,9 +4,12 @@ MAINTAINER cmsd2@cantab.net
 
 ENV UPDATED 1
 
+RUN curl -sL https://rpm.nodesource.com/setup_9.x | bash -
 RUN yum -y update
 RUN yum -y install https://rhel6.iuscommunity.org/ius-release.rpm
 RUN yum -y install python36u-pip unqip jq zip unzip
+RUN yum -y install nodejs
+RUN yum -y groupinstall 'Development Tools'
 RUN easy_install-3.6 pip
 RUN pip install virtualenv awscli
 RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.10.8/terraform_0.10.8_linux_amd64.zip
