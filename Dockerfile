@@ -16,5 +16,6 @@ RUN curl -o terraform.zip https://releases.hashicorp.com/terraform/0.10.8/terraf
 RUN unzip terraform.zip
 RUN mv terraform /usr/local/bin/
 RUN curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
+RUN npm install --quiet -g @angular/cli
 
 CMD [ "python3.6" ]
