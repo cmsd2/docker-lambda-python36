@@ -2,7 +2,7 @@ FROM amazonlinux:2016.09
 
 MAINTAINER cmsd2@cantab.net
 
-ENV UPDATED 1
+ENV UPDATED 2
 
 RUN curl -sL https://rpm.nodesource.com/setup_9.x | bash -
 RUN yum -y update
